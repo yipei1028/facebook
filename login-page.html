@@ -8,6 +8,7 @@
     <title>Facebook - 登入或註冊</title>
     <link rel="icon" href="./image/favicon.png">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.js">
 </head>
 
 <body>
@@ -20,9 +21,9 @@
                 <th style="text-align:left;font-size:14px;">密碼</th>
             </tr>
             <tr class="input">
-                <td><input type="text" style="background-color:rgb(252,255,191);border:0.5px black solid;height:26px;margin-right:10px;"></td>
-                <td><input type="password" style="background-color:rgb(252,255,191);border:0.5px black solid;height:26px;margin-right:10px;"></td>
-                <td style="border:0.3px solid black;color:white;background-color:rgb(80,102,175);display:block;height:25px;width:40px;text-align:center;line-height:20px;font-size:12px;padding:2px;">登入</td>
+                <td><input type="text" id="account" style="background-color:rgb(252,255,191);border:0.5px black solid;height:26px;margin-right:10px;"></td>
+                <td><input type="password" id="password" style="background-color:rgb(252,255,191);border:0.5px black solid;height:26px;margin-right:10px;"></td>
+                <td><button type="button" onclick="getUserInfo();" style="border:0.3px solid black;color:white;background-color:rgb(80,102,175);display:block;height:25px;width:40px;text-align:center;line-height:20px;font-size:12px;padding:2px;">登入</button></td>
             </tr>
 
         </table>
@@ -96,5 +97,15 @@
     </footer>
     <!--footer end-->
 </body>
+<script>
+    function getUserInfo() {
+        let account_element = document.getElementById("account");
+        let account = account_element.value;
+        let password_element = document.getElementById("password");
+        let password = account_element.value;
+        console.log("帳號：" + account + "\n密碼：" + password);
+    }
+
+</script>
 
 </html>
